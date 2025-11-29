@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+
+html{
+    scroll-behavior:  smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+body{
+    background: rosybrown;
+}
+
+
+/*Navigation styling*/
+.nav-bar{
+    align-items: center;
+    padding: 15px;
+    justify-content: space-between;
+    display: flex;
+    padding: 25px 9%;
+    width: 100%;
+    background: #3b141c;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+    
+}
+.nav-logo>.logo-text{
+    font-family:'miniver';
+    color: #f3961c;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 25px;
+    font-weight: 700;
+}
+/* Hamburger Menu */
+.hamburger{
+    display: none;
+    font-size: 30px;
+    color: #f3961c;
+    cursor: pointer;
+    z-index: 1001;
+}
+.nav-section-links>ul{
+    display: flex;
+    gap: 60px;
+}
+.nav-section-links>ul>li{
+    font-family: "Poppins";
+    list-style: none;
+}
+.nav-section-links>ul>li::after{
+    content: "";
+    width: 0%;
+    height: 5px;
+    display: block;
+    margin: auto;
+    background: #f3961c;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+.nav-section-links>ul>li:hover::after{
+    width: 100%;
+}
+.Place-order{
+    padding: 10px 26px;
+    border-radius:  2rem 0  2rem 0;
+    cursor: pointer;
+    font-family: "Poppins";
+    border: 2px solid transparent;
+    color: #fff;
+    background-color: chocolate;
+    transition: 0.3s ease;
+}
+.Place-order:hover{
+    border: 2px solid white;
+    background: transparent;
+    color: 2px solid #fff;
+}
+
+
+/*Header stylings*/
+.section-one{
+    margin-top: 100px;
+    padding: 0 200px;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.container>.box{
+    border: 5px solid white;
+    border-radius:8px;
+    overflow: hidden;
+}
+.container>.box>img{
+    display:block;
+    object-fit: cover;
+    width: 100%;
+}
+.header-text{
+    margin-top: 50px;
+}
+.header-text>h2{
+    font-size: 30px;
+    color: #3b141c;
+    font-family: "Poppins";
+}
+.header-text>p{
+    font-size: 16px;
+    font-family: "Poppins";
+    margin-bottom: 10px;
+}
+.section-two{
+    margin-top: 50px;
+    padding: 0 200px;
+    display: flex;
+    gap: 100px;
+}
+.Opening-hours>h3{
+    font-size: 25px;
+    color: #3b141c;
+    font-family: "Poppins";
+    margin-bottom: 10px;
+}
+.Opening-hours>ul>li{
+    list-style: none;
+    margin-bottom: 15px;
+}
+.contact-info p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    font-family: "Poppins";
+}
+.contact-info p i {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-right: 12px; /* Gap between icon and text */
+    flex-shrink: 0;
+}
+i{
+    font-size: 1.12rem;
+}
+.Contact-info>h3{
+    font-size: 25px;
+    color: #3b141c;
+    font-family: "Poppins";
+    margin-bottom: 10px;
+}
+.Contact-info>ul>li{
+    list-style: none;
+    margin-bottom: 15px;
+}
+/* Footer styling*/
+.footer-section{
+    padding:15px;
+    background-color: #3b141c;
+}
+.footer-section>.section-content{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+.section-content>.text-content{
+    margin-left: 25px;
+    font-family: "Poppins";
+    font-weight: 500;
+    margin-top: 25px;
+}
+.section-content>.links{
+    margin-top: 25px;
+    gap: 45px;
+    display: flex;
+    justify-content: center;
+}
+.section-content>.links>a>i{
+    color: #fff;
+    font-size: 25px;
+    transition: 0.2s ease;
+}
+.sep{
+    color: black;
+    font-size: 30px;
+}
+.section-content>.links>a>i:hover{
+    color: #f3961c;
+}
+.policy-text{
+    margin-right: 25px;
+    margin-top: 15px;
+}
+.policy-text>a{
+    color: black;
+    transition: 0.2s ease;
+    font-weight:500;
+    font-family: "Poppins";
+}
+.policy:hover{
+color:#f3961c ;
+}
+.policy-link:hover{
+    color: #f3961c;
+}
+/* MEDIA QUERIES - RESPONSIVE DESIGN */
+
+/* Large Tablets and Small Laptops (1024px and below) */
+@media screen and (max-width: 1024px){
+    .nav-bar{
+        padding: 20px 5%;
+    }
+    
+    .nav-section-links>ul{
+        gap: 40px;
+    }
+    
+    .section-one{
+        padding: 0 100px;
+        margin-top: 80px;
+    }
+    
+    .section-two{
+        padding: 0 100px;
+        gap: 60px;
+    }
+}
+
+/* Tablets (768px and below) */
+@media screen and (max-width: 768px){
+    .nav-bar{
+        padding: 20px 4%;
+        flex-wrap: nowrap;
+    }
+    
+    .nav-logo>.logo-text{
+        font-size: 18px;
+    }
+    /* Show Hamburger Menu */
+    .hamburger{
+        display: block;
+        order: 2;
+    }
+    /*hide nav links by default */
+    .nav-section-links{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #3b141c;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    /* Show nav links when active */
+    .nav-section-links.active{
+        max-height: 300px;
+    }
+    .nav-section-links>ul{
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        padding: 20px 0;
+
+    }
+    
+    
+    .nav-section-links>ul>li{
+        font-size: 15px;
+        padding: 15px 20px;
+        text-align: center;
+        border-bottom: 1px solid rgba(243, 150, 28, 0.2);
+    }
+    .nav-section-links>ul>li:last-child{
+        border-bottom: none;
+    }
+    
+    .Place-order{
+        order: 3;
+        padding: 8px 20px;
+        font-size: 14px;
+        
+    }
+    
+    .section-one{
+        padding: 0 40px;
+        margin-top: 60px;
+    }
+    
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .header-text{
+        margin-top: 40px;
+    }
+    
+    .header-text>h2{
+        font-size: 26px;
+    }
+    
+    .header-text>p{
+        font-size: 15px;
+    }
+    
+    .section-two{
+        padding: 0 40px;
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .footer-section>.section-content{
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .section-content>.text-content{
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    
+    .section-content>.links{
+        margin-top: 15px;
+        gap: 30px;
+    }
+    
+    .policy-text{
+        margin-right: 0;
+        margin-top: 10px;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media screen and (max-width: 480px){
+    .nav-bar{
+        padding: 15px 3%;
+    }
+    
+    .nav-logo>.logo-text{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .hamburger{
+        font-size: 28px;
+    }
+    
+    
+    
+    .nav-section-links>ul>li{
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+    
+    .Place-order{
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+    
+    .section-one{
+        padding: 0 20px;
+        margin-top: 40px;
+    }
+    
+    .container{
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .container>.box{
+        border: 3px solid white;
+    }
+    
+    .header-text{
+        margin-top: 30px;
+    }
+    
+    .header-text>h2{
+        font-size: 22px;
+    }
+    
+    .header-text>p{
+        font-size: 14px;
+    }
+    
+    .section-two{
+        padding: 0 20px;
+        margin-top: 40px;
+        gap: 30px;
+    }
+    
+    .Opening-hours>h3,
+    .Contact-info>h3{
+        font-size: 20px;
+    }
+    
+    .contact-info p{
+        font-size: 14px;
+    }
+    
+    .contact-info p i{
+        font-size: 18px;
+        margin-right: 8px;
+    }
+    
+    .footer-section{
+        padding: 10px;
+    }
+    
+    .section-content>.links{
+        gap: 20px;
+    }
+    
+    .section-content>.links>a>i{
+        font-size: 20px;
+    }
+    
+    .policy-text>a{
+        font-size: 14px;
+    }
+}
+
+/* Extra Small Devices (360px and below) */
+@media screen and (max-width: 360px){
+    .nav-logo>.logo-text{
+        font-size: 14px;
+    }
+    .hamburger{
+        font-size: 26px;
+    }
+    
+    .nav-section-links>ul>li{
+        font-size: 13px;
+    }
+    
+    .section-one{
+        padding: 0 15px;
+    }
+    
+    .header-text>h2{
+        font-size: 20px;
+    }
+    
+    .header-text>p{
+        font-size: 13px;
+    }
+    
+    .section-two{
+        padding: 0 15px;
+    }
+}
